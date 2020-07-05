@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev --transpileOnly --ignore-watch node_modules src/server.ts",
     "update-database": "npx knex migrate:latest --knexfile knexfile.ts",
-    "update-seeds": "npx knex seed:run --knexfile knexfile.ts"
+    "update-seeds": "npx knex seed:run --knexfile knexfile.ts",
+    "pm2-run": "pm2 start ecosystem.config.js --env production",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "Renan Magalhães Saraiva",
@@ -16,6 +18,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "knex": "^0.21.1",
+    "pm2": "^4.4.0",
     "sqlite3": "^4.2.0"
   },
   "devDependencies": {
